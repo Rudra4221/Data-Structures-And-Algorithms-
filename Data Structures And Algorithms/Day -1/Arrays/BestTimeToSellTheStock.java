@@ -2,22 +2,18 @@
 public class BestTimeToSellTheStock {
 
     public static int buyAndSellStock(int arr[]) {
-        if (arr == null || arr.length == 0)
-            return 0;
 
         int maxProfit = 0;
-        int buyStock = arr[0];
+        int buyStock = Integer.MAX_VALUE;
 
-        for (int i = 1; i < arr.length; i++) {
-
-            if (arr[i] < buyStock) {
+        for (int i = 0; i < arr.length; i++) {
+            if (buyStock > arr[i]) {
                 buyStock = arr[i];
             }
 
             int profit = arr[i] - buyStock;
 
             maxProfit = Math.max(maxProfit, profit);
-
         }
 
         return maxProfit;
