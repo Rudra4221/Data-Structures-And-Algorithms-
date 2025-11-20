@@ -6,7 +6,7 @@ public class Fibonacci {
         System.out.print(a + ", " + b);
 
         for (int i = 2; i < n; i++) {
-            int j = a + b; // <-- Fibonacci logic
+            int j = a + b;
             System.out.print(", " + j);
             a = b;
             b = j;
